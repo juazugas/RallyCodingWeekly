@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-export default class App extends Component {
+class App extends Component {
   componentWillMount() {
     this.props.fetchUsers();
   }
@@ -10,7 +10,7 @@ export default class App extends Component {
   renderUser({id, name, email}) {
     return (
       <li className="list-group-item" key={id}>
-        <span className="label label-defualt label-pill pull-xs-right">
+        <span className="label label-defualt label-pill float-right">
           <a href={email}>{email}</a>
         </span>
         {name}
